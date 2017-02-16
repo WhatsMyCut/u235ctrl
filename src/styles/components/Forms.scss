@@ -1,0 +1,41 @@
+.form-container {
+  padding: 0 75;
+}
+
+.control-label {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.view-control {
+  padding-left: 20px;
+}
+
+.radio-label,
+.checkbox-label {
+  padding-right: 5px;
+  margin-right: 10px;
+  font-weight: normal;
+}
+
+.radio-label input[type="radio"] {
+  margin-left: 5px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-left: 5px;
+}
+
+.btn-group {
+  //overrides bootstrap definition
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-left: 26px;
+  }
+}
+
+.btn-group button {
+  border-radius: 0px;
+}

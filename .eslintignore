@@ -1,0 +1,6 @@
+**/*.json
+**/*.md
+**/*.html
+
+src/vendor/bootstrap-datetimepicker/
+node_modules/

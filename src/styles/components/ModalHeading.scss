@@ -1,0 +1,30 @@
+@import "../variables";
+
+.ModalHeading {
+  margin-bottom: 30px;
+}
+
+.ModalHeading-heading {
+  float: left;
+  line-height: 33px;
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.ModalHeading-content {
+  float: right;
+}
+
+.ModalHeading-closeLink {
+  color: $brand-gray-color;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  .glyphicon-remove {
+    margin-right: 3px;
+  }
+}

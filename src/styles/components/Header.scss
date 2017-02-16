@@ -1,0 +1,15 @@
+@import "../variables";
+
+.Header-sidebarExpand {
+  width: 60px;
+  text-align: center;
+  color: $brand-neutral-brown-color !important;
+  font-size: 26px;
+  font-stretch: expanded;
+  margin-top: -5px;
+}
+
+.Header-logo {
+  margin-left: 0 !important;
+  padding-left: 20px;
+}

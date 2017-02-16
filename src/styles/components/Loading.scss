@@ -1,0 +1,141 @@
+@import "../variables";
+
+@-webkit-keyframes Loading {
+  0% {
+    transform: scale(2);
+  }
+
+  90% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes Loading {
+  0% {
+    transform: scale(2);
+  }
+
+  90% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes Loading {
+  0% {
+    transform: scale(2);
+  }
+
+  90% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-ms-keyframes Loading {
+  0% {
+    transform: scale(2);
+  }
+
+  90% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes Loading {
+  0% {
+    transform: scale(2);
+  }
+
+  90% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes Loading {
+  0% {
+    transform: scale(2);
+  }
+
+  90% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-o-keyframes Loading {
+  0% {
+    transform: scale(2);
+  }
+
+  90% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes Loading {
+  0% {
+    transform: scale(2);
+  }
+
+  90% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.Loading {
+  background: none;
+  position: relative;
+}
+
+.Loading > div {
+  position: absolute;
+  width: 20%;
+  height: 60%;
+  top: 20%;
+  left: 10%;
+  background: $brand-primary-blue-color;
+  opacity: 0.6;
+  animation: Loading 1s cubic-bezier(0.01, 0.73, 0.28, 0.93) infinite;
+}
+
+.Loading > div:nth-of-type(2) {
+  left: 40%;
+  opacity: 0.8;
+  animation-delay: 0.1s;
+}
+
+.Loading > div:nth-of-type(3) {
+  left: 70%;
+  opacity: 0.9;
+  animation-delay: 0.2s;
+}

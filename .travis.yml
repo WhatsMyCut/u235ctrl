@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+- '6'
+env:
+  matrix:
+  - CXX=g++-4.8
+  global:
+  - secure: lbDLSyCxjT/QJUUXwEr8pDP7uevuTnePiQmjbMtuRhpTpunYetmS4ziDx3zz0eEt148W/fpJb1ucCuvFj6Hs++J4E7lpuAfIi49KdNBQw1LfOn2d8tdGCtfzillxoFKzIbup1bqe/fCZw1DqQpzkMe8BQuivn8fzEcZ34P8ksnUMxcoU7mLtZIFN+gga17OqCqI2rYxXWPNzanzlepvYUChQHDFVL7n+29UDT99PlQRgI5jKkEbnuHPq9uALY9zEV0kAHggcViTiFWnZRFWL4M6JJTV074mK4X0c2iKqY4LXWnzIO6eM0Ubp1kot2oR0dE/ajffD8aWA4fxQ9Hxoo2C7EDUuOzFajwz/TM3PEcWdesEYGAipfGg9YUflQEoy8aXKmVmnuKsBoZyrGyYzyvjBOs2wpoNLjGvwEKDm3U+GzLmz9j56cAOvn19BJQhDb4aLYuMslUa1HXwIqEaSBvL1DcIj7EcSA8Xwjf2JrNY6Ugbv0ghMfZ6Afy014guFd1/YhEQw4VBRtfbEY8V8m8vy0n/x6MTe+18bqKWxJWDDJD33nYyrlKDq38p/t8mwOgRX4c2MGfrxazSu77Sszzt9NjoTDy1d56tlffmwsAT2EC0GCKCrzyexpo+izOKwxBsPtQ+SWFC41FzXh9xo4/IOiMoSDt3DQc0EZ05pO2I=
+  - secure: WyV2uC0+w7ESuMfrSduQYZg0WmYAnODTMuqbbqtoSbWsOo3vrRKAvD/flXdrOPyhsm/JS9/+rPNXFMrPsFNbri7IjdqK6yJDfNM2YlJcdH0fVeDcEhUZQeVr6rEIT+5xdbMQK1pccxXkx2W+vEu6f/DqhAxpoxMAFa034wobg8GQFL7FBN3MdG4+x5ctpLiK8qx/y2JNjwP8AnMAI/1VX618xZy2llAsxCQDnWKQWkuH3I2+qtuXJEipDsRySFBtggFMciKpAdfgEYuKpStDlL4HpgyN9aHaVELr6WUFk8gmxaDY/U3z4+EseQt5+XrHj9tGS/H7G1eo8FU3ko0UML8tPJNgPVv8Ppz0HFIsow8tb8IpMaZKgoShx3yq/Ltn1zwtovYEdXBoG4sEpcFSEt4NNYdrDelLBfUoTD0xmJdv3QVIna7X1DX0L5Ck0YbpHXRaaFcVVKvUUEACr6/OvT4aOGHHYHZnpaXyNC6D/nUPeJT28lLfRe8WESzK44kd5Q4842s5ZKLhy0166+2awCJDzmuuyeRuuwjBStRgUe2RCiqkq84Rx9rkMWs4CzeVN/RDZ9LPKeqvIILeKKHEkFK6XACNPKmvAgURxk12eGRC0+8Sx+TXQjwUYIPM2kqXwSXED0QkTwnTVz6RfIqf9clDIdrQdYR/J636KnXgHJI=
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+before_script: "./scripts/travis-before-script.sh"
+script:
+- npm run lint:ci
+- npm test
+- npm run build:prod
+before_install:
+- pip install --user awscli
+- export PATH=$PATH:$HOME/.local/bin
+#deploy:

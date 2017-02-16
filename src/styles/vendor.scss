@@ -1,0 +1,228 @@
+@import "./variables";
+@import "./fonts";
+@import "./node_modules/flatpickr/dist/flatpickr.min";
+@import "./node_modules/react-dragula/dist/dragula";
+@import "./node_modules/react-select/dist/react-select";
+@import "../vendor/tipsy/tipsy";
+@import "../vendor/bootstrap-datetimepicker/bootstrap-datetimepicker";
+
+/* override bootstrap variables with application variables */
+$gray-dark: #4c4845 !default;
+$text-color: $gray-dark;
+$icon-font-path: "../fonts/";
+$brand-primary: $brand-primary-blue-color;
+$brand-success: $brand-primary-blue-color;
+$brand-danger: $brand-red-color;
+$btn-success-bg: $brand-green-color;
+$btn-secondary-bg: $brand-navy-blue-color;
+$btn-cancel-bg: $brand-gray-color;
+$btn-disable-bg: $brand-red-color;
+
+//=== Inverted navbar
+// Reset inverted navbar basics
+$navbar-border-radius: 0;
+$navbar-margin-bottom: 0;
+$navbar-inverse-color: lighten($text-color, 15%) !default;
+$navbar-inverse-bg: $brand-primary-blue-color !default;
+$navbar-inverse-border: darken($navbar-inverse-bg, 10%) !default;
+
+/*
+// Inverted navbar links
+$navbar-inverse-link-color: #fff !default;
+$navbar-inverse-link-hover-color: #fff !default;
+$navbar-inverse-link-hover-bg: transparent !default;
+$navbar-inverse-link-active-color: $navbar-inverse-link-hover-color !default;
+$navbar-inverse-link-active-bg: darken($navbar-inverse-bg, 10%) !default;
+$navbar-inverse-link-disabled-color: #444 !default;
+$navbar-inverse-link-disabled-bg: transparent !default;
+
+// Inverted navbar brand label
+$navbar-inverse-brand-color: $navbar-inverse-link-color !default;
+$navbar-inverse-brand-hover-color: #fff !default;
+$navbar-inverse-brand-hover-bg: transparent !default;
+
+// Inverted navbar toggle
+$navbar-inverse-toggle-hover-bg: #333 !default;
+$navbar-inverse-toggle-icon-bar-bg: #fff !default;
+$navbar-inverse-toggle-border-color: #333 !default;
+*/
+
+//
+// Variables
+// --------------------------------------------------
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+$gray-base: #4c4845;
+$gray-darker: #000; // #222
+$gray-dark: #4c4845 !default;
+$gray: #707170; // #555
+$gray-light: $brand-cool-gray-color;
+$gray-lighter: #f4f3f2;
+$brand-cancel: $gray; // #337ab7
+$brand-primary: #54b0cb; // #337ab7
+$brand-success: #aacf76;
+$brand-info: #00657f;
+$brand-warning: #e15829;
+$brand-danger: #ab2b28;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+//** Background color for `<body>`.
+$body-bg: #fff !default;
+
+//** Global text color on `<body>`.
+$text-color: $gray-dark !default;
+
+//** Global textual link color.
+$link-color: $brand-primary !default;
+
+//** Link hover color set via `darken()` function.
+$link-hover-color: darken($link-color, 15%) !default;
+
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif: "Open Sans", Helvetica, Arial, sans-serif;
+$font-size-base: 12px !default;
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base: 1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed: floor(($font-size-base * $line-height-base)); // ~20px
+$headings-font-weight: 600 !default;
+$headings-color: #4c4845;
+$font-size-h1: 24px !default;
+$font-size-h2: 14px !default;
+$font-size-h3: 14px !default;
+$font-size-h4: 14px !default;
+$font-size-h5: 14px !default;
+$font-size-h6: 14px !default;
+
+//== Iconography
+//
+//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
+//** Load fonts from this directory.
+// [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
+// [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
+$icon-font-path: "../fonts/";
+
+//** File name for all font files.
+$icon-font-name: "glyphicons-halflings-regular";
+
+//** Element ID within SVG icon file.
+$icon-font-svg-id: "glyphicons_halflingsregular";
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+$border-radius-base: 0px;
+$border-radius-large: 0px;
+$border-radius-small: 0px;
+
+//== Tables
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+//** Padding for `<th>`s and `<td>`s.
+$table-cell-padding: 15px;
+
+//** Background color used for `.table-striped`.
+$table-bg-accent: $gray-lighter !default;
+$table-bg-active: lighten(#86c2d5, 15%) !default;
+$table-bg-danger: #ff9d9a !default;
+
+//** Border color for table and cell borders.
+$table-border-color: transparent !default;
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+$btn-font-weight: bold;
+$btn-primary-border: transparent;
+$btn-success-border: transparent;
+$btn-info-border: transparent;
+$btn-warning-border: transparent;
+$btn-danger-border: transparent;
+$btn-link-disabled-color: $gray-light;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius-base: $border-radius-base;
+$btn-border-radius-large: $border-radius-large;
+$btn-border-radius-small: $border-radius-small;
+
+//== Pagination
+//
+//##
+$pagination-color: $link-color !default;
+$pagination-bg: #fff !default;
+$pagination-border: $gray-dark !default;
+$pagination-hover-color: $link-hover-color !default;
+$pagination-hover-bg: $gray-lighter !default;
+$pagination-hover-border: #ddd !default;
+$pagination-active-color: #fff !default;
+$pagination-active-bg: $brand-primary !default;
+$pagination-active-border: $brand-primary !default;
+$pagination-disabled-color: $gray-light !default;
+$pagination-disabled-bg: #fff !default;
+$pagination-disabled-border: #ddd !default;
+
+//== Pager
+//
+//##
+$pager-bg: $pagination-bg !default;
+$pager-border: $pagination-border !default;
+$pager-border-radius: 1px !default;
+$pager-hover-bg: $pagination-hover-bg !default;
+$pager-active-bg: $pagination-active-bg !default;
+$pager-active-color: $pagination-active-color !default;
+$pager-disabled-color: $pagination-disabled-color !default;
+$breadcrumb-padding-vertical: 8px !default;
+$breadcrumb-padding-horizontal: 0 !default;
+
+//== Forms
+//
+//##
+$input-color: $gray-dark;
+
+// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
+$input-border-radius: 5px !default;
+
+//** Large `.form-control` border radius
+$input-border-radius-large: 5px !default;
+
+//** Small `.form-control` border radius
+$input-border-radius-small: 5px !default;
+
+//** Breadcrumb background color
+$breadcrumb-bg: transparent !default;
+
+//** Breadcrumb text color
+$breadcrumb-color: $gray !default;
+
+//** Text color of current page in the breadcrumb
+$breadcrumb-active-color: $gray !default;
+
+//** Textual separator for between breadcrumb elements
+$breadcrumb-separator: "-" !default;
+
+/* include specific portions of bootstrap to use such as the responsive grid */
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+/* stylelint-disable */
+.form-control-static {
+
+  /* stylelint-enable */
+  margin-top: 0;
+}
+
+.btn-cancel {
+  @include button-variant(#fff, $gray, transparent);
+}
+
+.btn-toolbar > a > button {
+  margin-left: 5px;
+}

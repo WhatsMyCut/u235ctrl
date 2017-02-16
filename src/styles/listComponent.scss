@@ -1,0 +1,51 @@
+@import "./variables";
+
+.listComponent-container {
+  display: flex;
+  position: relative;
+  height: 100%;
+}
+
+.listComponent-documentLink {
+  cursor: hand;
+  padding-left: 10px;
+}
+
+.listComponent-optionsLink {
+  overflow: visible;
+}
+
+.listComponent-genericList {
+  flex: 1;
+  height: 100%;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  overflow: scroll;
+}
+
+.listComponent-actionBar {
+  padding: 15px 0px 20px 0px;
+}
+
+.listComponent-search {
+  font-size: 12px;
+  width: 260px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.listComponent-resolutionRed {
+  font-size: medium;
+  color: $brand-red-color;
+}
+
+.listComponent-resolutionGreen {
+  font-size: medium;
+  color: $brand-green-color;
+}
+
+//actions dropdown, in case link does not have href set
+.dropdown-menu li a {
+  cursor: pointer;
+}

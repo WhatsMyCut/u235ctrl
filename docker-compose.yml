@@ -1,0 +1,19 @@
+version: '2'
+services:
+  u235core:
+    image: ../u235core
+    environment:
+      - DATABASE_URL=postgres://u235core:u235corepassword@db:5432/u235core
+      - NODE_ENV=testing
+    entrypoint: "/bin/bash -c"
+    command: "/usr/bin/supervisord"
+    depends_on:
+      - db
+    ports:
+      - "8000:80"
+  db:
+    image: postgres:9.5
+    environment:
+      - POSTGRES_PASSWORD=u235corepassword
+      - POSTGRES_USER=u235core
+      - POSTGRES_DB=u235core

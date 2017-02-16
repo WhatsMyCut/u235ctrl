@@ -1,0 +1,33 @@
+@import "./variables";
+
+.searchComponent {
+  min-height: 100%;
+  color: #fff;
+  background-color: $brand-gray-color;
+
+  .form-group {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  //user lookup has a nested formgroup, so don't apply padding twice
+  .form-group .form-group {
+    padding: 0px;
+  }
+}
+
+.searchHeader {
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  padding-left: 10px;
+  padding-top: 10px;
+  font-weight: 800;
+}
+
+.searchSubmitButton {
+  border: none;
+  width: 65%;
+  font-weight: 600;
+  margin-top: 10px;
+}

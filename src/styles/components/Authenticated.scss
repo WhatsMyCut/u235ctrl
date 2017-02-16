@@ -1,0 +1,15 @@
+@import "../variables";
+
+// position and size the authenticated container component
+.Authenticated {
+  height: 100%;
+  position: relative;
+  clear: both;
+}
+
+// position and size the main content container
+.Authenticated-content {
+  overflow-y: auto;
+  position: relative;
+  height: calc(100% - #{$header-height});
+}

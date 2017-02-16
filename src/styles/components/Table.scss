@@ -1,0 +1,12 @@
+.Table-columnHeader {
+  user-select: none;
+  cursor: default;
+
+  .Table-columnHeaderSortable {
+    cursor: pointer;
+  }
+
+  .Table-columnHeaderSortable:hover {
+    text-decoration: underline;
+  }
+}

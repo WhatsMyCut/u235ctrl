@@ -1,0 +1,106 @@
+@import "../variables";
+
+.SidebarContainer {
+  height: 100%;
+  float: left;
+}
+
+.Sidebar {
+  font-weight: bold;
+  font-size: 0.8em;
+  background: $brand-neutral-brown-color;
+  text-align: center;
+  transition: width 0.2s;
+  z-index: 100;
+  width: 60px;
+  min-width: 60px;
+  float: left;
+  height: 100%;
+  position: relative;
+}
+
+.Sidebar.is-expanded {
+  width: 240px;
+
+  .Sidebar-listItemContent {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .Sidebar-listItem:hover {
+    background: $brand-gray-color;
+
+    .Sidebar-listItemContent {
+      padding-left: 0;
+      background: $brand-gray-color;
+    }
+  }
+}
+
+.Sidebar-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+
+.Sidebar-listItem {
+  position: relative;
+  height: 50px;
+
+  &:hover {
+    display: block;
+    background: $brand-gray-color;
+    width: 240px;
+    overflow: visible;
+  }
+}
+
+.Sidebar-listItemActive {
+  background: $brand-gray-color;
+}
+
+.Sidebar-listItemLink {
+  display: block;
+  height: 100%;
+  padding: 15px 0 15px 0;
+  text-decoration: none;
+  margin: 0px;
+  color: #fff;
+
+  &:focus {
+    color: #fff;
+  }
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+
+    .Sidebar-listItemContent {
+      right: 0;
+      top: 0;
+      bottom: 0;
+      line-height: 45px;
+      padding-left: 10px;
+      vertical-align: middle;
+      display: block;
+      z-index: 10;
+      background: $brand-neutral-brown-color;
+    }
+  }
+}
+
+.Sidebar-listItemContent {
+  display: none;
+  position: absolute;
+  left: 60px;
+  text-align: left;
+  margin: 0;
+}
+
+.Sidebar-listItemImage {
+  width: 20px;
+  display: block;
+  float: left;
+  margin-left: 20px;
+}
