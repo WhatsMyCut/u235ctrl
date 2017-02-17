@@ -7,7 +7,7 @@ const getInitialState = () => {
     auth: { isLoggedIn: false },
     sidebar: { isExpanded: false },
     currentUser: null,
-    currentUserPermissionsHash: {}
+    currentUserPermissionsHash: {},
     notifications: {}
   }
 }
@@ -88,6 +88,10 @@ module.exports = function rootReducer(state = getInitialState(), action) {
     return createNotification(state, action)
   case ActionTypes.DISMISS_NOTIFICATION:
     return dismissNotification(state, action)
+  case ActionTypes.FETCH_FIELDS_SUCCESS:
+    return setFields(state, action)
+  case ActionTypes.FETCH_FIELD_GROUPS_SUCCESS:
+    return setFieldGroups(state, action)
   default:
     return state
   }

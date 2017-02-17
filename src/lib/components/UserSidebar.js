@@ -4,7 +4,6 @@ const { connect } = require('react-redux')
 const withRouter = require('react-router/lib/withRouter')
 const Actions = require('lib/actions/Actions')
 const ContextualSidebar = require('lib/components/ContextualSidebar')
-const hasPermissions = require('lib/unsorted/hasPermissions')
 const _ = require('lodash')
 
 class UserSidebar extends Component {

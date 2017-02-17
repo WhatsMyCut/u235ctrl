@@ -114,37 +114,6 @@ class UserForm extends Component {
         </GridRow>
         <GridRow>
           <GridItem width={6}>
-            <div className={getFormGroupClasses('umbrellaId')}>
-              <label className="control-label">Parent User</label>
-              <br/>
-              {viewMode && <span className="view-control">{FormUtils.valueLookup(umbrellas, formValues.umbrellaId) }</span>}
-              {editMode &&
-                <select
-                onChange={this.onFieldChange.bind(this, 'umbrellaId')}
-                value={formValues.umbrellaId}
-                className="form-control"
-                name="umbrellaId">{umbrellasOptions}</select>
-              }
-            </div>
-          </GridItem>
-          <GridItem width={6}>
-            <div className={getFormGroupClasses('verticalId')}>
-              <label className="control-label">Vertical*</label>
-              <br/>
-              {viewMode && <span className="view-control">{FormUtils.valueLookup(verticals, formValues.verticalId)
-              }</span>}
-              {editMode &&
-                <select
-                onChange={this.onFieldChange.bind(this, 'verticalId')}
-                value={formValues.verticalId}
-                className="form-control"
-                name="verticalId">{verticalsOptions}</select>
-              }
-            </div>
-          </GridItem>
-        </GridRow>
-        <GridRow>
-          <GridItem width={6}>
             <div className="form-group">
               <label className="control-label">Create Date</label>
               <br/>

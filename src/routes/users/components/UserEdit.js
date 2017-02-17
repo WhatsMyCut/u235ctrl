@@ -22,7 +22,7 @@ class UserEdit extends Component {
       formValues: {
         id: '',
         name: '',
-        shortName: ''
+        shortName: '',
         active: true,
         createdAt: '',
         updatedAt: '',
