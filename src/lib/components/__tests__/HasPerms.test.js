@@ -32,7 +32,7 @@ describe('HasPerms', () => {
       let wrapper = mount(
         <Provider store={store}>
           <HasPerms needs={['CAMEL.*']}>
-            <span>I can haz permission</span>
+            <span>Thread the needle</span>
           </HasPerms>
         </Provider>
       )
