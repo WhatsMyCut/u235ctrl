@@ -24,7 +24,10 @@ module.exports = function getRoute(store) {
         }, {
           path: ':userId',
           onEnter: (nextState, replace) => {
-            replace(`/users/${nextState.params.userId}/view`)
+            let canView = hasPermissions({needs: [Permissions.USERS_READ], permissions: store.getState().currentUserPermissionsHash})
+            if (!canView) {
+              replace(`/users/${nextState.params.userId}/view`)
+            }
           }
         }, {
           path: ':userId/view',

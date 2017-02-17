@@ -201,7 +201,7 @@ class StyleGuide extends Component {
               },{
                 url: '#/styleguide',
                 text: 'User Style'
-              }{
+              },{
                 url: '#/styleguide',
                 text: 'Details'
               }]} />

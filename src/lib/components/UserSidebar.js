@@ -69,7 +69,8 @@ UserSidebar.propTypes = {
   params: PropTypes.object.isRequired,
   router: PropTypes.object.isRequired,
   dispatch: PropTypes.func,
-  permissions: PropTypes.object
+  permissions: PropTypes.object,
+  hasPermissions: PropTypes.bool
 }
 
 const mapStateToProps = (state) => {

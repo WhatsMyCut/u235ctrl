@@ -7,7 +7,7 @@ const getInitialState = () => {
     auth: { isLoggedIn: false },
     sidebar: { isExpanded: false },
     currentUser: null,
-    currentUserPermissionsHash: {}
+    currentUserPermissionsHash: {},
     notifications: {}
   }
 }
