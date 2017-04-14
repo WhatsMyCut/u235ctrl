@@ -21,4 +21,4 @@ script:
 before_install:
 - pip install --user awscli
 - export PATH=$PATH:$HOME/.local/bin
-#deploy:
+#deploy: 
