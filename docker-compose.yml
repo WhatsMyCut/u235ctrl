@@ -4,7 +4,7 @@ services:
     image: ../u235core
     environment:
       - DATABASE_URL=postgres://u235core:u235corepassword@db:5432/u235core
-      - NODE_ENV=testing
+      - NODE_ENV=test
     entrypoint: "/bin/bash -c"
     command: "/usr/bin/supervisord"
     depends_on:
